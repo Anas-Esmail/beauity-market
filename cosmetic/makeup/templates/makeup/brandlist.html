@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href='{%static "makeup/syle.css"%}' >    
+ 
+<head>
+<body>
+    <ul >
+        <li><a  href="http://127.0.0.1:8000/">Home</a></li>
+        <li><a class="active" href="http://127.0.0.1:8000/brandlist">brand</a></li>
+        <li><a href="http://127.0.0.1:8000/productlist">product</a></li>
+        
+      </ul>
+
+<div class="title">
+<h1>brands list page</h1>
+<div>
+<div class="container"> 
+<ol>
+    
+
+{%for i in brnad %}
+<li>
+<a href="http://127.0.0.1:8000/branddetails/{{i.name}}">
+
+the brand name is   {{i.name}}
+   the brand origin is   {{i.origin}}
+</a>
+</li>
+{% endfor %}
+    
+</ol>
+</div>
+</body>
+
+</html>

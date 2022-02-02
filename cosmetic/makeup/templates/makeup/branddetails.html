@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href='{%static "makeup/syle.css"%}' >    
+<head>
+<h1>hello there </h1>
+<div class="container" style="margin-left:40%;">
+    <ol>
+   
+
+    <li style="margin-right: 20px;">
+    {%for i in brands %}
+     the name of brand is {{i.name}} <br>
+     the number of brand is {{i.id}} <br>
+     the origin of brand is {{i.origin}}
+    {% endfor %}
+    </li>
+           
+       </ol>
+   </div >
+
+
+</html>
